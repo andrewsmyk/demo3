@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html language="en">
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<!--[if lt IE 9]>
+<script src="dist/html5shiv.js"></script>
+<![endif]-->
+<style>
+body { font-size:62.5%; }
+h1 { font-size: 2.4rem; } /* =24px */
+p  { font-size: 18px; font-size: 1.8rem; } /* =18px */
+li { font-size: 1.4rem; } /* =14px? */
+
+#wrapper {
+	margin: 0 auto;
+}
+
+#main {
+	margin: 0 auto;
+	background-color:#FFF;
+}
+
+#banner_image {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+@media screen and (max-width: 235px) {
+	#main {width: 199px;}
+	p {font-size: 11px; font-size: 1.1rem; } /* =11px */
+    #banner_image {
+		width: 40px;
+		height: 40px;
+        background-image: url(images/optimus40.jpg);
+    }
+}
+
+@media screen and (min-width: 236px) {
+	#main {width: 236px;}
+	p {font-size: 14px; font-size: 1.4rem; } /* =14px */
+    #banner_image {
+		width: 236px;
+		height: 119px;
+        background-image: url(images/prime_truck_236.jpg);
+    }
+}
+
+@media screen and (min-width: 620px) {
+	body {background-image: url(images/slash.gif)}:
+	#main {width: 620px;}
+    #banner_image {
+		width: 612px;
+		height: 792px;
+        background-image: url(images/optimus.jpg);
+    }
+}
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+<section>
+<div id="banner_image"></div>
+<div id="main"><p>Optimus Prime is the leader of the Autobots.</p>
+</div>
+</section>
+</div>
+</body>
+</html>

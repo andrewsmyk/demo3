@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html language="en">
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#wrapper {
+	margin: 0 auto;
+}
+
+#main {
+	width: 620px;
+	margin: 0 auto;
+}
+
+body { font-size:62.5%; }
+h1 { font-size: 2.4em; } /* =24px */
+p  { font-size: 1.4em; } /* =14px */
+li { font-size: 1.4em; } /* =14px? */
+
+
+@media screen and (min-width: 480px) {
+    div {
+        background-image: url(images/small.jpg);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    div {
+        background-image: url(images/big.jpg);
+    }   
+}
+
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="main">
+<script>
+function boxmodel(){ 
+    var newDiv = document.createElement('div');
+    document.body.appendChild(newDiv);
+    newDiv.style.width = '20px';
+    newDiv.style.padding = '10px';
+    var divWidth = newDiv.offsetWidth;
+    document.body.removeChild(newDiv);
+    return divWidth == 40;
+}
+</script>
+<p>This is just some random text.</p>
+<p>
+<ul>
+<li>asdasdfasdfasdf</li>
+<li>
+<ul>
+	<li>asdfasfdasfd</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>

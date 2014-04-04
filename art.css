@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin:0;
+	font-size: 100%;
+	background: lightgrey;
+}
+
+.hero-image {
+	position: relative;
+	width: 100%;
+	max-width:60em;
+	margin: 0 auto;
+}
+
+img {
+	width: 100%;
+	z-index: 0;
+}
+
+@media (max-width: 40em) {
+
+	.hero-image {
+		height: 20em;
+		overflow: hidden;
+	}
+
+	img[src*="hpos"], img[src*="vpos"] {
+		position: absolute;
+		width:150%;
+	}
+	
+	img[src*="hpos=0"] {left:0;}
+	img[src*="hpos=1"] {left:-10%;}
+	img[src*="hpos=2"] {left:-20%;}
+	img[src*="hpos=3"] {left:-30%;}
+	img[src*="hpos=4"] {left:-40%;}
+	img[src*="hpos=5"] {left:-50%;}
+	img[src*="hpos=6"] {right:0;}
+
+	img[src*="vpos=0"] {top:0;}
+	img[src*="vpos=1"] {top:-10%;}
+	img[src*="vpos=2"] {top:-20%;}
+	img[src*="vpos=3"] {top:-30%;}
+	img[src*="vpos=4"] {top:-40%;}
+	img[src*="vpos=5"] {top:-50%;}
+	img[src*="vpos=6"] {bottom:0;}
+
+}
+
+@media (max-width: 30em) {
+	.hero-image {
+		height: 15em;
+	}
+}
+
+@media (max-width: 20em) {
+	.hero-image {
+		height: 10em;
+	}
+	img[src*="hpos"], img[src*="vpos"] {
+		width:200%;
+	}
+	
+	img[src*="hpos=1"] {left:-20%;}
+	img[src*="hpos=2"] {left:-40%;}
+	img[src*="hpos=3"] {left:-60%;}
+	img[src*="hpos=4"] {left:-80%;}
+	img[src*="hpos=5"] {left:-100%;}
+	img[src*="hpos=6"] {right:0;}
+
+	img[src*="vpos=1"] {top:-20%;}
+	img[src*="vpos=2"] {top:-40%;}
+	img[src*="vpos=3"] {top:-60%;}
+	img[src*="vpos=4"] {top:-80%;}
+	img[src*="vpos=5"] {top:-100%;}
+	img[src*="vpos=6"] {bottom:0;}
+}
+
